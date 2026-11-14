@@ -1,0 +1,22 @@
+Documentation for how the API will work
+
+API that is going to be used:
+- Open AI (gpt-4o or gpt-4o-mini)
+
+An OpenAI key will be used as a variable to access the API for used
+
+Process of using the API:
+- Front end will allow the user to upload a document of their choice
+- The end point will file over and HTTP POST request to the backend server
+- An API route is dispatched to the API using the POST protocol
+- Next.js will receive the info and will convert it to a binary stream of info to send to the API
+- OpenAI's API will then interpret the binary info for interpretation
+
+Schema Used:
+- Zod Schema Validation will be used as a bridge between the AI text and the TypeScript language.
+  Zod will ensure that the data that is being passed through JSON will match up with what we're wanting
+
+Official documentation:
+- Doc Portal: https://developers.openai.com/
+- Outputs Guide: https://developers.openai.com/api/docs/guides/structured-outputs
+- API Reference: https://developers.openai.com/api/reference/overview
