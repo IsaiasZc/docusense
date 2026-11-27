@@ -9,10 +9,10 @@ NEXT_PUBLIC_SUPABASE_URL=your-project-url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-publishable-key
 ```
 
-Run `pnpm dev` and open `/invoices/review`. The invoice list uses the
-publishable key and respects the project's access policies. Without a user
-session, invoices may not be visible. The review form is a preview; upload,
-extraction, document loading, and saving are not connected yet.
+Run `docusense_schema_nologin.sql` once in the Supabase SQL editor (no login, adds a sample invoice).
+Run `pnpm dev` and open `/invoices/review`: pick an invoice, correct the fields and press
+"Save & approve". The preview reads the file from the public Storage bucket `documents`.
+Upload and saving the extraction (`/api/extract` to Supabase) are not connected yet.
 
 To check the database connection and expected columns, run
 `node --env-file=.env.local --test tests/supabase.test.mjs`. An empty result
