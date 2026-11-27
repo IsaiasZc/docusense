@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { InvoiceReview } from "./invoice-review";
 
 export default function InvoiceReviewPage() {
@@ -20,6 +21,10 @@ export default function InvoiceReviewPage() {
         <p className="mt-2 text-sm leading-6 text-slate-600">
           Review and correct the extracted information before approving your invoice.
         </p>
+
+        <Link href="/invoices/upload" className="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          Upload a new invoice
+        </Link>
 
         <InvoiceReview />
       </main>
